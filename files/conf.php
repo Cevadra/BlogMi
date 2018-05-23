@@ -1,11 +1,11 @@
 <?php
 $mc_config = array (
-  'site_link' => 'http://127.0.0.1',
-  'site_name' => '博客迷',
-  'site_desc' => '不需要数据库的迷你博客程序',
-  'user_name' => 'admin',
-  'user_pass' => '2046',
-  'user_nick' => 'BlogMi',
+  'site_link' => 'http://localhost',
+  'site_name' => 'BlogMi',
+  'site_desc' => 'Make it light',
+  'user_name' => 'blogmi',
+  'user_pass' => '1024',
+  'user_nick' => '您的名字',
   'comment_code' => '',
 )
 ?>
