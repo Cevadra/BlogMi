@@ -33,7 +33,7 @@ else if (preg_match('|^(([-a-zA-Z0-5]+/)+)$|', $qs, $matches)) {
   $mc_page_num = isset($_GET['page']) ? $_GET['page'] : 1;
 }
 if ($mc_get_type == 'post') {
-  require 'files/posts/index/publish.php';
+  require('files/posts/index/publish.php');
   if (array_key_exists($mc_get_name, $mc_posts)) {
     $mc_post_id = $mc_get_name;
     $mc_post = $mc_posts[$mc_post_id];
@@ -44,7 +44,7 @@ if ($mc_get_type == 'post') {
   }
 }
 else if ($mc_get_type == 'tag') {
-  require 'files/posts/index/publish.php';
+  require('files/posts/index/publish.php');
   $mc_post_ids = array_keys($mc_posts);
   $mc_post_count = count($mc_post_ids);
   $mc_tag_posts = array();
@@ -60,7 +60,7 @@ else if ($mc_get_type == 'tag') {
   $mc_post_count = count($mc_post_ids);
 }
 else if ($mc_get_type == 'date') {
-  require 'files/posts/index/publish.php';
+  require('files/posts/index/publish.php');
   $mc_post_ids = array_keys($mc_posts);
   $mc_post_count = count($mc_post_ids);
   $mc_date_posts = array();
@@ -76,7 +76,7 @@ else if ($mc_get_type == 'date') {
   $mc_post_count = count($mc_post_ids);
 }
 else if ($mc_get_type == 'archive') {
-  require 'files/posts/index/publish.php';
+  require('files/posts/index/publish.php');
   $mc_post_ids = array_keys($mc_posts);
   $mc_post_count = count($mc_post_ids);
   $tags_array = array();
@@ -91,7 +91,7 @@ else if ($mc_get_type == 'archive') {
   $mc_dates = array_values(array_unique($date_array));
 }
 else if ($mc_get_type == 'page') {
-  require 'files/pages/index/publish.php';
+  require('files/pages/index/publish.php');
   if (array_key_exists($mc_get_name, $mc_pages)) {
     $mc_post_id = $mc_get_name;
     $mc_post = $mc_pages[$mc_post_id];
@@ -102,12 +102,12 @@ else if ($mc_get_type == 'page') {
   }
 }
 else {
-  require 'files/posts/index/publish.php';
+  require('files/posts/index/publish.php');
   $mc_post_ids = array_keys($mc_posts);
   $mc_post_count = count($mc_post_ids);
 }
 if ($mc_get_type != 'rss')
-  require 'files/theme/v/index.php';
+  require('files/theme/v/index.php');
 else
-  require 'files/rss.php';
+  require('files/rss.php');
 ?>
